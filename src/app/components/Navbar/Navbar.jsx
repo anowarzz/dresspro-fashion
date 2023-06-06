@@ -72,7 +72,7 @@ const Navbar = () => {
                       <Link href="/">Women</Link>
                     </li>
                     <li className="border-b-2 hover:border-b-blue-600">
-                      <Link href="/">Kid</Link>
+                      <Link href="/">Kids</Link>
                     </li>
                   </ul>
                 </div>
@@ -186,7 +186,7 @@ const Navbar = () => {
                             <Link href="/">Women</Link>
                           </li>
                           <li className="border-b-2 hover:border-b-blue-600">
-                            <Link href="/">Kid</Link>
+                            <Link href="/">Kids</Link>
                           </li>
                         </ul>
                       )}

@@ -1,7 +1,9 @@
 "use client"
 import Image from 'next/image';
-import Jeans from '../../../../public/images/jeans-collection.jpg'
+import tshirt from '../../../../public/images/black-tshirt.png'
 import JeansCollection from '../../../../public/images/cloth-collection.jpg'
+import styles from './HeroSection.module.css'
+
 
  const HeroSection = () => {
     return (
@@ -14,7 +16,7 @@ import JeansCollection from '../../../../public/images/cloth-collection.jpg'
         <div className="relative bg-opacity-60 bg-black">
           <svg
             className="absolute inset-x-0 bottom-0 bottom-hidden text-white"
-            viewBox="0 0 1160 153"
+            viewBox="00 00 00 00"
           >
             <path
               fill="currentColor"
@@ -40,8 +42,9 @@ import JeansCollection from '../../../../public/images/cloth-collection.jpg'
                 </p>
             
               </div>
-              <div className="w-full h-[80vh] max-w-xl xl:px-8 xl:w-5/12">
-              
+              <div className="w-full h-[80vh] max-w-xl xl:px-8 xl:w-5/12 relative">
+              <Image className={styles.tShirtUpDown}  src={tshirt} alt="" />
+      
               </div>
             </div>
           </div>

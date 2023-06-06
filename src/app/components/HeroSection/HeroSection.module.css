@@ -1,0 +1,26 @@
+.tShirtUpDown {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform: rotateX(90);
+    bottom: 0;
+    right: -60px;
+    animation-name: upDownLoop;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all .3s;
+  }
+
+@keyframes upDownLoop {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
