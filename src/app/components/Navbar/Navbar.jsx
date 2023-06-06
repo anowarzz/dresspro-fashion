@@ -11,8 +11,18 @@ import { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+const [showProducts, setShowProducts] = useState(false)
+
+
+const productsToggleHandler = () => {
+setShowProducts(true)
+
+}
+
+
+
   return (
-    <div className=" relative px-4 bg-gray-50 py-6 md:py-7 mx-auto sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8">
+    <div className=" relative px-4 bg-teal-300 py-6 md:py-7 mx-auto sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8">
       <div className="flex items-center justify-between">
         <Link
           href="/"
@@ -26,24 +36,39 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 "
+              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
             >
               Home
             </Link>
           </li>
-          <li>
+          <li className="relative group">
             <Link
               href="/"
-              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 "
+              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600 "
             >
-            Products <FontAwesomeIcon icon={faChevronDown} />
+          <p>  Products <FontAwesomeIcon icon={faChevronDown} /></p>
+
+          <div className=" bg-white absolute top-12 -left-4  text-left px-8  py-2 hidden group-hover:block">
+         <ul className=" space-y-3 w-32 py-2 flex flex-col"> 
+           <li className="border-b-2 hover:border-b-blue-600">
+           <Link href="/">Men</Link>
+           </li>
+           <li className="border-b-2 hover:border-b-blue-600">
+           <Link href="/">Women</Link>
+           </li>
+           <li className="border-b-2 hover:border-b-blue-600">
+           <Link href="/">Kid</Link>
+           </li>
+         </ul>
+       </div>
+       
             
             </Link>
           </li>
           <li>
             <Link
               href="/"
-              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 "
+              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
             >
               About Us
             </Link>
@@ -51,7 +76,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 "
+              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
             >
               Contact
             </Link>
@@ -117,7 +142,7 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
                       >
                         Home
                       </Link>
@@ -126,16 +151,16 @@ const Navbar = () => {
                  <div>
                  <Link
                         href="/"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
                       >
-                        Products
+                       Products <FontAwesomeIcon icon={faChevronDown} />
                       </Link>
                  </div>
                     </li>
                     <li>
                       <Link
                         href="/"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
                       >
                         About Us
                       </Link>
@@ -143,7 +168,7 @@ const Navbar = () => {
                     <li>
                       <Link
                         href="/"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
                       >
                         Contact
                       </Link>
