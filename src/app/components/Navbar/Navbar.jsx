@@ -16,10 +16,16 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [isDropdownActive, setIsDropdownActive] = useState(false);
+  const [isMobileDropdownActive, setIsMobileDropdownActive] = useState(false);
 
-  // Function to handle hover state
+  // Function to handle product nested items display state
   const handleDropdownHover = () => {
     setIsDropdownActive(!isDropdownActive);
+  };
+
+  // Function to handle nested products in mobile verison
+  const handleMobileDropdown = () => {
+    setIsMobileDropdownActive(!isMobileDropdownActive);
   };
 
   // Use useEffect to reset dropdown state after a certain time
@@ -47,13 +53,13 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
+              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600 text-lg"
             >
               Home
             </Link>
           </li>
           <li
-            className="relative group font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 border-b-2 border-b-transparent hover:border-b-blue-600 "
+            className="relative group font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 border-b-2 border-b-transparent hover:border-b-blue-600 text-lg"
             onClick={handleDropdownHover}
           >
             <p>
@@ -80,7 +86,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
+              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600 text-lg"
             >
               About Us
             </Link>
@@ -88,7 +94,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
+              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600 text-lg"
             >
               Contact
             </Link>
@@ -125,7 +131,7 @@ const Navbar = () => {
                 : "absolute -top-96 -left-0 h-full transition-opacity  ease-out w-full duration-500"
             } `}
           >
-            <div className="p-5 bg-white border rounded shadow-sm">
+            <div className="p-5 bg-gray-100 pb-12 pt-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <Link
@@ -134,7 +140,7 @@ const Navbar = () => {
                     title="Company"
                     className="inline-flex items-center"
                   >
-                    <span className="ml-2 text-lg md:text-xl font-bold tracking-wide text-blue-600 uppercase">
+                    <span className="ml-2 text-lg md:text-xl font-bold tracking-wide text-[#292557] uppercase">
                       Dress Pro Fashion
                     </span>
                   </Link>
@@ -156,30 +162,42 @@ const Navbar = () => {
                 </div>
               </div>
               <nav>
-                <ul className="space-y-4 text-center text-teal-600 flex flex-col justify-center items-center">
+                <ul className="space-y-4 text-center text-teal-400 flex flex-col justify-center items-center">
                   <li>
                     <Link
+                      onClick={() => setIsMenuOpen(false)}
                       href="/"
-                      className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
+                      className="font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
                     >
                       Home
                     </Link>
                   </li>
                   <li>
                     <div
-                      className="relative    font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
-                      onClick={() => setIsDropdownActive(!isDropdownActive)}
+                      className="relative    font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600 border-b-2 border-b-transparent"
+                      onClick={() =>
+                        setIsMobileDropdownActive(!isMobileDropdownActive)
+                      }
                     >
                       Products <FontAwesomeIcon icon={faChevronDown} />
-                      {isDropdownActive && (
+                      {isMobileDropdownActive && (
                         <ul className=" space-y-3 w-32 py-2 flex flex-col text-center justify-center items-center">
-                          <li className="border-b-2 hover:border-b-blue-600">
+                          <li
+                            className="border-b-2 hover:border-b-blue-600"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
                             <Link href="/men">Men</Link>
                           </li>
-                          <li className="border-b-2 hover:border-b-blue-600">
+                          <li
+                            className="border-b-2 hover:border-b-blue-600"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
                             <Link href="/women">Women</Link>
                           </li>
-                          <li className="border-b-2 hover:border-b-blue-600">
+                          <li
+                            className="border-b-2 hover:border-b-blue-600"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
                             <Link href="/kids">Kids</Link>
                           </li>
                         </ul>
@@ -188,6 +206,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
+                      onClick={() => setIsMenuOpen(false)}
                       href="/"
                       className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
                     >
@@ -196,6 +215,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
+                      onClick={() => setIsMenuOpen(false)}
                       href="/"
                       className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
                     >

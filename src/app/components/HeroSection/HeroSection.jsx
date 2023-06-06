@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
 import tshirt from '../../../../public/images/black-tshirt.png'
+import blackJeans from '../../../../public/images/black-jeans.png'
 import JeansCollection from '../../../../public/images/cloth-collection.jpg'
 import styles from './HeroSection.module.css'
 
@@ -10,10 +11,10 @@ import styles from './HeroSection.module.css'
         <div className="relative">
         <Image
           src={JeansCollection}
-          className="absolute inset-0 object-cover w-full h-full"
+          className="absolute lg:hidden inset-0 object-cover w-full h-full"
           alt="Jeans"
         />
-        <div className="relative bg-opacity-60 bg-black">
+        <div className="relative bg-opacity-60 lg:bg-opacity-70 bg-black">
           <svg
             className="absolute inset-x-0 bottom-0 bottom-hidden text-white"
             viewBox="00 00 00 00"
@@ -24,9 +25,9 @@ import styles from './HeroSection.module.css'
             />
           </svg>
     
-          <div className="relative px-4 pt-16 md:pt-4  pb-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="flex flex-col items-center justify-between xl:flex-row">
-              <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+          <div className="relative  px-4 pt-16 md:pt-4  pb-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="flex flex-col items-center justify-between lg:flex-row">
+              <div className="w-full flex flex-col justify-center items-center md:pt-12 lg:pt-0 max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
                 {/* <h2 className="block lg:hidden max-w-lg mb-6 font-bold tracking-tight text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:leading-non leading-relaxed">
                  <span className='lg:py-4'>Your Garments</span> <span className='lg:py-4'>Apparel <br className='lg:hidden'/> Supplier</span> <br className="hidden lg:block" /> <span className='lg:pt-12'>From Bangladesh</span>
                 </h2> */}
@@ -35,13 +36,16 @@ import styles from './HeroSection.module.css'
         <h2 className="text-center max-w-lg mb-2 font-bold tracking-tight text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:leading-non leading-relaxed">Apparel <span className='text-[#b3ec07]'>Supplier</span></h2>
         <h2 className=" text-center max-w-lg mb-4 font-bold tracking-tight text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:leading-non leading-relaxed">From <span className='text-[#b3ec07]'>Bangladesh</span></h2>
 
-                <p className="text-center max-w-xl mb-4 text-base text-gray-50 md:text-lg">
+                <p className="text-center max-w-xl mb-4 font-medium text-gray-50 md:text-lg">
                 We are your gateway to exceptional garment sourcing. With a keen focus on quality, craftsmanship, and reliable partnerships, we are here to connect you with the finest suppliers and manufacturers in the industry.
                 </p>
             
               </div>
               <div className="w-full lg:h-[80vh] max-w-xl xl:px-8 xl:w-5/12 relative">
-              {/* <Image className={styles.tShirtUpDown}  src={tshirt} alt="" /> */}
+              <Image width='300' height='300'  className={`transform rotate-90 ${styles.tShirtUpDown} hidden transform rotate-45 lg:block`} src={tshirt} alt="" />
+
+
+              <Image width='300' height='300'  className={`  ${styles.jeansUpDown} hidden  lg:block`} src={blackJeans} alt="" />
       
               </div>
             </div>

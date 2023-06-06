@@ -1,26 +1,48 @@
 .tShirtUpDown {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    transform: rotate(45deg);
-    bottom: 0;
-    right: -60px;
-    animation-name: upDownLoop;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    transition: all .3s;
-  }
+  position: absolute;
+  transform: rotate(45deg);
+  bottom: -30%;
+  right: 2%;
+  animation-name: upDownLoop;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  transition: all 0.5s;
+}
 
 @keyframes upDownLoop {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-30px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
   }
-  
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.jeansUpDown {
+  position: absolute;
+  transform: rotate(45deg);
+  top: -21%;
+  right: 0%;
+  animation-name: jeansUpDownLoop;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+  transition: all 0.6s;
+}
+
+@keyframes jeansUpDownLoop {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
