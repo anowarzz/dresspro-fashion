@@ -7,7 +7,7 @@ import styles from './HeroSection.module.css'
 
  const HeroSection = () => {
     return (
-        <div className="relative mb-20">
+        <div className="relative">
         <Image
           src={JeansCollection}
           className="absolute inset-0 object-cover w-full h-full"
@@ -36,9 +36,7 @@ import styles from './HeroSection.module.css'
         <h2 className=" text-center max-w-lg mb-4 font-bold tracking-tight text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:leading-non leading-relaxed">From <span className='text-[#b3ec07]'>Bangladesh</span></h2>
 
                 <p className="text-center max-w-xl mb-4 text-base text-gray-50 md:text-lg">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                  quae.
+                We are your gateway to exceptional garment sourcing. With a keen focus on quality, craftsmanship, and reliable partnerships, we are here to connect you with the finest suppliers and manufacturers in the industry.
                 </p>
             
               </div>

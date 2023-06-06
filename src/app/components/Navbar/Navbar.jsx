@@ -39,7 +39,7 @@ const Navbar = () => {
     <div className="z-50 relative px-4 bg-white py-6 md:py-7 mx-auto sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8">
       <div className="flex items-center justify-between">
         <Link href="/" className="inline-flex items-center">
-          <span className="ml-2 text-xl font-bold tracking-wide text-blue-600 uppercase">
+          <span className="ml-2 text-xl font-bold tracking-wide text-[#292557] uppercase">
             Dress Pro Fashion
           </span>
         </Link>
