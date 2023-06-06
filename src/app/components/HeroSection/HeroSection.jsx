@@ -40,7 +40,7 @@ import styles from './HeroSection.module.css'
                 </p>
             
               </div>
-              <div className="w-full h-[80vh] max-w-xl xl:px-8 xl:w-5/12 relative">
+              <div className="w-full lg:h-[80vh] max-w-xl xl:px-8 xl:w-5/12 relative">
               {/* <Image className={styles.tShirtUpDown}  src={tshirt} alt="" /> */}
       
               </div>

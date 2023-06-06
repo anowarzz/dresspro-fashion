@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './Display2.module.css'
 import Image from 'next/image';
-import JeansCollect from '../../../../public/images/jeans-collection.jpg'
-import svgShape  from '../../../../public/images/blob.svg'
 
 
 const Display2 = () => {
