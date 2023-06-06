@@ -1,5 +1,9 @@
 "use client";
 
+import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { faCaretDown, faCaretSquareDown, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
@@ -8,8 +12,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-4 bg-gray-50 py-6 mx-auto sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8">
-      <div className="relative flex items-center justify-between">
+    <div className=" relative px-4 bg-gray-50 py-6 md:py-7 mx-auto sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8">
+      <div className="flex items-center justify-between">
         <Link
           href="/"
           className="inline-flex items-center"
@@ -32,7 +36,8 @@ const Navbar = () => {
               href="/"
               className="font-medium tracking-wide text-gray-800 transition-colors duration-200 "
             >
-              Products
+            Products <FontAwesomeIcon icon={faChevronDown} />
+            
             </Link>
           </li>
           <li>
@@ -48,7 +53,7 @@ const Navbar = () => {
               href="/"
               className="font-medium tracking-wide text-gray-800 transition-colors duration-200 "
             >
-              Contact Us
+              Contact
             </Link>
           </li>
         </ul>
@@ -57,7 +62,7 @@ const Navbar = () => {
           <button
             aria-label="Open Menu"
             title="Open Menu"
-            className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+            className="p-2 z-10 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
             onClick={() => setIsMenuOpen(true)}
           >
             <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -86,7 +91,7 @@ const Navbar = () => {
                       title="Company"
                       className="inline-flex items-center"
                     >
-                      <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                      <span className="ml-2 text-lg md:text-xl font-bold tracking-wide text-blue-600 uppercase">
                         Dress Pro Fashion
                       </span>
                     </Link>
@@ -108,7 +113,7 @@ const Navbar = () => {
                   </div>
                 </div>
                 <nav>
-                  <ul className="space-y-4">
+                  <ul className="space-y-4 text-center text-teal-600">
                     <li>
                       <Link
                         href="/"
@@ -118,12 +123,14 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
+                 <div>
+                 <Link
                         href="/"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
                       >
                         Products
                       </Link>
+                 </div>
                     </li>
                     <li>
                       <Link
@@ -138,7 +145,7 @@ const Navbar = () => {
                         href="/"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
                       >
-                        Contact us
+                        Contact
                       </Link>
                     </li>
                   </ul>
