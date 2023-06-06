@@ -43,7 +43,7 @@ import styles from './HeroSection.module.css'
             
               </div>
               <div className="w-full h-[80vh] max-w-xl xl:px-8 xl:w-5/12 relative">
-              <Image className={styles.tShirtUpDown}  src={tshirt} alt="" />
+              {/* <Image className={styles.tShirtUpDown}  src={tshirt} alt="" /> */}
       
               </div>
             </div>

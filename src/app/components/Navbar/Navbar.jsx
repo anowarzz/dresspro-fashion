@@ -52,32 +52,30 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="relative group" onClick={handleDropdownHover}>
-            <Link
-              href="/"
-              className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600 "
-            >
-              <p>
-                {" "}
-                Products <FontAwesomeIcon icon={faChevronDown} />
-              </p>
+          <li
+            className="relative group font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:border-b-2 border-b-2 border-b-transparent hover:border-b-blue-600 "
+            onClick={handleDropdownHover}
+          >
+            <p>
+              {" "}
+              Products <FontAwesomeIcon icon={faChevronDown} />
+            </p>
 
-              {isDropdownActive && (
-                <div className=" bg-white absolute transition-all duration-1000 ease-linear top-12 -left-4  text-left px-8  py-2 ">
-                  <ul className=" space-y-3 w-32 py-2 flex flex-col">
-                    <li className="border-b-2 hover:border-b-blue-600">
-                      <Link href="/">Men</Link>
-                    </li>
-                    <li className="border-b-2 hover:border-b-blue-600">
-                      <Link href="/">Women</Link>
-                    </li>
-                    <li className="border-b-2 hover:border-b-blue-600">
-                      <Link href="/">Kids</Link>
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </Link>
+            {isDropdownActive && (
+              <div className=" bg-white absolute transition-all duration-1000 ease-linear top-10 -left-8  text-left px-8  py-2 ">
+                <ul className=" space-y-3 w-32 py-2 flex flex-col">
+                  <li className="border-b-2 hover:border-b-blue-600">
+                    <Link href="/men">Men</Link>
+                  </li>
+                  <li className="border-b-2 hover:border-b-blue-600">
+                    <Link href="/women">Women</Link>
+                  </li>
+                  <li className="border-b-2 hover:border-b-blue-600">
+                    <Link href="/kids">Kids</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </li>
           <li>
             <Link
@@ -168,25 +166,21 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <div className="relative">
-                      <Link
-                        href="/"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
-                        onClick={() => setIsDropdownActive(!isDropdownActive)}
-                      >
-                        Products <FontAwesomeIcon icon={faChevronDown} />
-                      </Link>
-
+                    <div
+                      className="relative    font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:border-b-2 hover:border-b-blue-600"
+                      onClick={() => setIsDropdownActive(!isDropdownActive)}
+                    >
+                      Products <FontAwesomeIcon icon={faChevronDown} />
                       {isDropdownActive && (
                         <ul className=" space-y-3 w-32 py-2 flex flex-col text-center justify-center items-center">
                           <li className="border-b-2 hover:border-b-blue-600">
-                            <Link href="/">Men</Link>
+                            <Link href="/men">Men</Link>
                           </li>
                           <li className="border-b-2 hover:border-b-blue-600">
-                            <Link href="/">Women</Link>
+                            <Link href="/women">Women</Link>
                           </li>
                           <li className="border-b-2 hover:border-b-blue-600">
-                            <Link href="/">Kids</Link>
+                            <Link href="/kids">Kids</Link>
                           </li>
                         </ul>
                       )}

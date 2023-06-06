@@ -17,7 +17,8 @@ const Footer = () => {
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
       
-            <svg
+         <div className="flex">
+         <svg
               className="w-8 text-deep-purple-accent-400"
               viewBox="0 0 24 24"
               strokeLinejoin="round"
@@ -32,9 +33,10 @@ const Footer = () => {
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
             </svg>
-            <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
+            <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase inline">
               Dress Pro Fashion Limited
             </span>
+         </div>
          
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-white">

@@ -2,7 +2,7 @@
     width: 200px;
     height: 200px;
     position: absolute;
-    transform: rotateX(90);
+    transform: rotate(45deg);
     bottom: 0;
     right: -60px;
     animation-name: upDownLoop;
