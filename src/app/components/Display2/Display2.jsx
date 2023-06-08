@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Display2 = () => {
     return (
         <>
-        <div className={`h-64 relative ${styles.display2}`}>
+        <div className={`h-32 relative ${styles.display2}`}>
    
          
 

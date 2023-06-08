@@ -32,7 +32,7 @@ import styles from './HeroSection.module.css'
                  <span className='lg:py-4'>Your Garments</span> <span className='lg:py-4'>Apparel <br className='lg:hidden'/> Supplier</span> <br className="hidden lg:block" /> <span className='lg:pt-12'>From Bangladesh</span>
                 </h2> */}
             
-        <h2 className="text-center max-w-lg mb-2 font-bold tracking-tight text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:leading-non leading-relaxed">Your <span className='text-[#b3ec07]'>Garments</span></h2>
+        <h2 className="text-center max-w-lg mb-2 font-bold tracking-tight text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:leading-non leading-relaxed">Reliable <span className='text-[#b3ec07]'>Garments</span></h2>
         <h2 className="text-center max-w-lg mb-2 font-bold tracking-tight text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:leading-non leading-relaxed">Apparel <span className='text-[#b3ec07]'>Supplier</span></h2>
         <h2 className=" text-center max-w-lg mb-4 font-bold tracking-tight text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:leading-non leading-relaxed">From <span className='text-[#b3ec07]'>Bangladesh</span></h2>
 
